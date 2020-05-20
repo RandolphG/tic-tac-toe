@@ -53,6 +53,14 @@ export const Board = () => {
     setXNext(!xNext);
   };
 
+  const reset = (index) => {
+    const square = [...boardSquare];
+    for (let i = 0; i < boardSquare.length - 1; i++) {
+      square[index] = "";
+      // console.log("nothing");
+    }
+  };
+
   /**
    * create a render of tiles
    * @param index
@@ -106,7 +114,8 @@ export const Board = () => {
       </Holder>
       <JoinButton disabled={joined} onClick={handleJoin}>
         Join
-      </JoinButton>
+      </JoinButton>{" "}
+      <JoinButton onClick={() => reset()}>RESET</JoinButton>
     </BoardStyled>
   );
 };

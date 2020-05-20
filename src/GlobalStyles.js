@@ -5,13 +5,19 @@ export const Square = styled.div`
   align-items: center;
   justify-content: center;
   background: deeppink;
-  color: black;
-  border: black 1px solid;
   font-weight: 600;
   font-size: 4rem;
   padding: 1rem;
-  height: 100px;
-  width: 100px;
+  color: #605b56;
+  border-color: #605b56;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.2em;
+  float: left;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  text-align: center;
+  cursor: default;
 `;
 
 export const Row = styled.div`
