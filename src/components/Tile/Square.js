@@ -1,13 +1,13 @@
 import React from "react";
-import { SquareStyled } from "../GlobalStyles";
+import { SquareStyled } from "../../GlobalStyles";
 import Cross from "./Cross";
 import Zero from "./Zero";
 import { connect } from "react-redux";
-import { drawXAction, drawOAction } from "../actions/boardActions";
-import { toggleTurnAction } from "../actions/playerActions";
+import { drawXAction, drawOAction } from "../../actions/boardActions";
+import { toggleTurnAction } from "../../actions/playerActions";
 
 /**
- *
+ * the individual pieces
  * @param props
  * @returns {*}
  * @constructor
@@ -30,14 +30,14 @@ const Square = (props) => {
 };
 
 /**
- *
+ * make state properties
  * @param state
  * @returns {{turn: (string)}}
  */
 const mapStateToProps = ({ board, players }) => ({ board, players });
 
 /**
- *
+ * map dispatch actions
  * @param dispatch
  * @returns {{draw: draw}}
  */

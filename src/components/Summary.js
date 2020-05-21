@@ -2,6 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { checkResult } from "../actions/resultsAction";
 
+/**
+ * game game status summary
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 const Summary = (props) => {
   const { board, players, result, checkResult } = props;
 

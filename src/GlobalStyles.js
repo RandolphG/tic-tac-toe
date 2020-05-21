@@ -2,28 +2,23 @@ import styled from "styled-components";
 
 export const GameBoardStyled = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  //align-items: center;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
+  align-items: center;
 `;
 
 export const SquareStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  //margin: 5px;
+  margin: 5px;
   background: deeppink;
-  font-weight: 600;
-  font-size: 4rem;
   padding: 1rem;
   color: black;
   border-color: #605b56;
-  width: 1.2em;
-  height: 1.2em;
-  line-height: 1.2em;
-  float: left;
+  width: 3rem;
+  height: 3rem;
   border-style: solid;
-  border-width: 1px 1px 0 0;
   border-radius: 5px;
   text-align: center;
   cursor: default;
@@ -48,13 +43,13 @@ export const BoardStyled = styled.div`
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #ffaf7b, #d76d77, #3a1c71);
   height: 100vh;
+`;
+
+export const Holder = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-
-export const Holder = styled.div`
   padding: 1rem;
 `;
 
@@ -73,4 +68,17 @@ export const JoinButton = styled.button`
   margin-top: 1rem;
   height: 2rem;
   width: 5rem;
+`;
+
+export const OStyled = styled.div`
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+`;
+export const XStyled = styled.div`
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
 `;

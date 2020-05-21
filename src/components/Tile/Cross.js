@@ -1,7 +1,8 @@
 import React from "react";
+import { XStyled } from "../../GlobalStyles";
 
 const Cross = (props) => {
-  return <div>X</div>;
+  return <XStyled>X</XStyled>;
 };
 
 export default Cross;

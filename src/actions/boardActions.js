@@ -1,7 +1,7 @@
 import { DRAW_X, DRAW_O } from "../helpers/actionTypes";
 
 /**
- *
+ * draw the X marker on the board
  * @returns {{type: string, cell: *}}
  * @param cellIndex
  */
@@ -15,7 +15,7 @@ export const drawXAction = (cellIndex) => {
 };
 
 /**
- *
+ * draw the O marker on the board
  * @returns {{type: string, cell: *}}
  * @param cellIndex
  */
