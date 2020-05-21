@@ -1,7 +1,7 @@
 import React from "react";
 
-const MyComponent = () => {
+const Zero = (props) => {
   return <div>O</div>;
 };
 
-export default MyComponent;
+export default Zero;

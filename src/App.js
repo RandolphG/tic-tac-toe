@@ -1,11 +1,11 @@
 import React from "react";
-import { Board } from "./components/Board";
 import "./App.css";
+import GameBoard from "./components/GameBoard";
 
 function App() {
   return (
     <div>
-      <Board />
+      <GameBoard />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { DRAW_X, DRAW_O } from "../helpers/actionTypes";
 
-const initialState = [null, null, null, null, null, null, null, null, null];
+const initialState = [null, null, null, "X", "O", null, null, null, null];
 
 /**
  *
@@ -8,14 +8,15 @@ const initialState = [null, null, null, null, null, null, null, null, null];
  * @param action
  */
 export const boardReducer = (state = initialState, action) => {
-  const newState = [...state];
   switch (action.type) {
     case DRAW_X:
-      newState[action.cell] = "X";
-      return newState;
+      const newXState = [...state];
+      newXState[action.cellIndex] = "X";
+      return newXState;
     case DRAW_O:
-      newState[action.cell] = "Y";
-      return newState;
+      const newOState = [...state];
+      newOState[action.cellIndex] = "O";
+      return newOState;
     default:
       return state;
   }

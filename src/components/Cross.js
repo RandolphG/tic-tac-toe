@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cross = () => {
+const Cross = (props) => {
   return <div>X</div>;
 };
 

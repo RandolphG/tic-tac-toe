@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
-export const Square = styled.div`
+export const GameBoardStyled = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  //align-items: center;
+  justify-content: center;
+`;
+
+export const SquareStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px;
+  //margin: 5px;
   background: deeppink;
   font-weight: 600;
   font-size: 4rem;
   padding: 1rem;
-  color: #black;
+  color: black;
   border-color: #605b56;
   width: 1.2em;
   height: 1.2em;
@@ -20,7 +27,6 @@ export const Square = styled.div`
   border-radius: 5px;
   text-align: center;
   cursor: default;
-
   transition: background 0.3s;
   &:hover {
     background: #9a8297;
