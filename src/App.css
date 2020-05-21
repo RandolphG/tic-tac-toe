@@ -4,4 +4,7 @@ body {
   /*box-sizing: border-box;*/
   margin: 0;
   overflow: hidden;
+  background: #3A1C71;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #FFAF7B, #D76D77, #3A1C71);
 }

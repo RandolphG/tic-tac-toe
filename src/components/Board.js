@@ -7,9 +7,10 @@ import {
   Row,
   StatusBar,
 } from "../GlobalStyles";
+import { connect } from "react-redux";
 import { joinGame } from "../utils/game-client";
 
-export const Board = () => {
+export const Board = (props) => {
   useEffect(() => {});
 
   const [name, setName] = React.useState(null);
@@ -89,11 +90,6 @@ export const Board = () => {
   return (
     <BoardStyled>
       <StatusBar>{status}</StatusBar>
-      <input
-        type="text"
-        onChange={(e) => setName(e.target.value)}
-        disabled={joined}
-      />
       {joined && <label>your id: {id}</label>}
       <Holder>
         <Row>
@@ -148,3 +144,5 @@ const calculateWinner = (squares) => {
   }
   return null;
 };
+
+export default connect(({ board }) => ({ board }))(Board);
