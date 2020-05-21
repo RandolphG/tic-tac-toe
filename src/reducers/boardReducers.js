@@ -1,6 +1,6 @@
 import { DRAW_X, DRAW_O } from "../helpers/actionTypes";
 
-const initialState = [null, null, null, "X", "O", null, null, null, null];
+const initialState = [null, null, null, null, null, null, null, null, null];
 
 /**
  *
