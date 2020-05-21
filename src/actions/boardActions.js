@@ -6,7 +6,12 @@ import { DRAW_X, DRAW_O } from "../helpers/actionTypes";
  * @param cellIndex
  */
 export const drawXAction = (cellIndex) => {
-  return { type: DRAW_X, cellIndex };
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      dispatch({ type: DRAW_X, cellIndex });
+      resolve();
+    });
+  };
 };
 
 /**
@@ -15,5 +20,10 @@ export const drawXAction = (cellIndex) => {
  * @param cellIndex
  */
 export const drawOAction = (cellIndex) => {
-  return { type: DRAW_O, cellIndex };
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      dispatch({ type: DRAW_O, cellIndex });
+      resolve();
+    });
+  };
 };

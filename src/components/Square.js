@@ -14,11 +14,15 @@ import { toggleTurnAction } from "../actions/playerActions";
  * TODO disable the square if already selected
  */
 const Square = (props) => {
-  const { symbol, index, draw, players } = props;
+  const { symbol, index, draw, players, board, toggleTurn } = props;
   return (
     <SquareStyled
       className={{ cell: true, disabled: symbol }}
-      onClick={() => draw(players, index)}
+      onClick={() =>
+        draw(players, index, board).then(() => {
+          toggleTurn();
+        })
+      }
     >
       {symbol ? symbol === "X" ? <Cross /> : <Zero /> : ""}
     </SquareStyled>
@@ -38,14 +42,14 @@ const mapStateToProps = ({ board, players }) => ({ board, players });
  * @returns {{draw: draw}}
  */
 const mapDispatchToProps = (dispatch) => ({
-  draw: (players, cellIndex) => {
+  draw: (players, cellIndex, board) => {
     if (players[players.turn] === "X") {
-      dispatch(drawXAction(cellIndex));
+      return dispatch(drawXAction(cellIndex));
     } else {
-      dispatch(drawOAction(cellIndex));
+      return dispatch(drawOAction(cellIndex));
     }
-    dispatch(toggleTurnAction());
   },
+  toggleTurn: () => dispatch(toggleTurnAction()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Square);
