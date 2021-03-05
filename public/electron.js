@@ -1,8 +1,6 @@
-const { app, BrowserWindow, ipcMain, remote } = require("electron");
+const { app, BrowserWindow } = require("electron");
 const path = require("path");
 const isDev = require("electron-is-dev");
-const fs = require("fs");
-const systemPreferences = remote.systemPreferences;
 
 const installExtensions = async () => {
   const installer = require("electron-devtools-installer");

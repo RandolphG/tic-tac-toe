@@ -1,24 +1,24 @@
-## Electron Tic Tac Toe
-
-In the project directory, you can run:
+# Tic Tac Toe
 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Tic Tac Toe](https://github.com/RandolphG/tic-tac-toe/blob/master/public/_tic-tac-toe.gif?raw=true)
 
-components:
--Board
-    -Cross
-    -Zero
-    
-    Store:
-    board:
-    players:{
-      p1;'X'
-      p2:'O'
-      turn:p1
-    }
-    results:{
-    win:null
-        draw:false
-    }
+
+### Installation process :
+
+- clone repo
+- navigate to project folder
+- install all dependencies with npm
+- run with npm
+
+
+```bash
+$ git clone https://github.com/RandolphG/tic-tac-toe.git
+$ cd project
+$ npm i
+$ npm run electron
+```
+## Features
+- redux
+- styled-components
+- socket-io
